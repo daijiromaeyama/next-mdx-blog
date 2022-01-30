@@ -13,7 +13,7 @@ type Post = {
   content: string
 }
 
-const POSTS_PATH = join(process.cwd(),'_post')
+const POSTS_PATH = join(process.cwd(),'posts')
 
 function getPostsFilePaths(): string[] {
   return (

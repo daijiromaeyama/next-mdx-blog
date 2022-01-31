@@ -1,13 +1,16 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import 'tailwindcss/tailwind.css'
 import Layout from '../components/Layout'
+import 'tailwindcss/tailwind.css'
+import { MdxComponentsProvider } from '../context/mdxContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <MdxComponentsProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </MdxComponentsProvider>
   )
 }
 
